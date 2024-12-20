@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metin Sayacı</title>
+</head>
+<body>
+    <textarea id="text" oninput="countWords()" placeholder="Metni buraya yazın..."></textarea>
+    <p id="counter"></p>
+
+    <script>
+        function countWords() {
+            const text = document.getElementById('text').value;
+            const wordCount = text.split(' ').filter(word => word !== '').length;
+            document.getElementById('counter').textContent = `Kelime Sayısı: ${wordCount}, Karakter Sayısı: ${text.length}`;
+        }
+    </script>
+</body>
+</html>
